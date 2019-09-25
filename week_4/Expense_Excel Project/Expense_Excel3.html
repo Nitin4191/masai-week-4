@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <title>The Expense Excel Edit Page</title>
+    <link rel="stylesheet" type="text/css" href="Expense_Excel.css">
+    <body class = "a1" style = "background: rgb(189, 145, 64); border: 3px solid black">
+        <script src="Expense_Excel.Js"></script>
+        <div class = "b1">THE EXPENSE EXCEL</div>
+        <h3 id = "z5">Edit Information</h3>
+        <h4>Choose Fields to Edit</h4>
+        <div class = "editCustomer">
+            <label for = "name">Name</label>
+            <input type = "text" name = "name" class = "editCustomer1" placeholder = "  Enter Name...Firstname - Lastname"/>
+
+            <label for = "age">Age</label>
+            <input type = "number" name = "age" class = "editCustomer1"/>
+
+            <label for  = "telephone">Contact Number</label>
+            <input type = "tel" name = "telephone" class = "editCustomer1" placeholder = "  Format : +30 - 123 - 456 - 7890..." 
+               pattern = "[+]{1}[0-9] {4} - [0-9] {3} - [0-9] {3} - [0-9] {4}" required>
+        
+            <label for = "email">Email Address</label>
+            <input type = "email" name = "emailAddress" class = "editCustomer1" placeholder = "  Format : abc@pqrsxyz.com..."/>
+        
+            <label for = "accountInformation">Account Information</label>
+            <input type = "text" name = "accountInformation" class = "editCustomer1"/>
+
+            <label for =  "incomeMonthSource">Income Month Source</label>
+            <input type = "text" name = "incomeMonthSource" class = "editCustomer1" placeholder = "  Format : Rs 65186 - January - Got it somewhere..." 
+               pattern = "  [a-z] {4} [0-9] {20} - [a-z] {10} [a-z, 0-9] {30}" required>
+
+            <label for =  "expenditure&source">Expenditure & Source</label>
+            <input type = "text" name = "expenditure&source" class = "editCustomer1" placeholder = "  Format : Rs 154515 - Gave it somewhere..." 
+               pattern = "  [a-z] {4} [0-9] {20} - [a-z, 0-9] {30}" required>
+
+            <label for = "totalExpenditure">Total Expenditure</label>
+            <input type = "text" name = "totalExpenditure" class = "editCustomer1"/>
+
+            <label for = "balance">Balance</label>
+            <input type = "text" name = "balance" class = "editCustomer1"/>
+
+            <label for = "submit">Add Account</label>
+            <button name = "saveChanges" id = "saveButton">Save Changes</button>
+        </div>
+    </body>
+</html>

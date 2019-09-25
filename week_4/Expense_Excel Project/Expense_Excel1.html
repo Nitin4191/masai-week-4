@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Expense Excel</title>
+        <link rel="stylesheet" type="text/css" href="Expense_Excel.css">
+    </head>
+    <body class = "a1">
+        <script src="Expense_Excel.Js"></script>
+        <div class = "b1">THE EXPENSE EXCEL</div>
+        <h3 id = "z1">Search Customer</h3>
+        <form id = "z2" role="search">
+            <div>
+              <input type="search" id="searchCustomer" name="searchCustomer"
+               placeholder="  Search the site..."
+               aria-label="Search through site content">
+              <button id = "z3">Search</button>
+            </div>
+          </form>
+
+        </div>
+        <h3 id = "z4">Add Customer</h3>
+        <div class = "newCustomer">
+            <label for = "name">Name</label>
+            <input type = "text" name = "name" class = "inputCustomer" placeholder = "  Enter Name...Firstname - Lastname"/>
+
+            <label for = "age">Age</label>
+            <input type = "number" name = "age" class = "inputCustomer"/>
+
+            <label for  = "telephone">Contact Number</label>
+            <input type = "tel" name = "telephone" class = "inputCustomer" placeholder = "  Format : +30 - 123 - 456 - 7890..." 
+                   pattern = "  [+]{1}[0-9] {4} - [0-9] {3} - [0-9] {3} - [0-9] {4}" required>
+            
+            <label for = "email">Email Address</label>
+            <input type = "email" name = "emailAddress" class = "inputCustomer" placeholder = "  Format : abc@pqrsxyz.com..."/>
+            
+            <label for = "accountInformation">Account Information</label>
+            <input type = "text" name = "accountInformation" class = "inputCustomer"/>
+
+            <label for =  "incomeMonthSource">Income Month Source</label>
+            <input type = "text" name = "incomeMonthSource" class = "inputCustomer" placeholder = "  Format : Rs 65186 - January - Got it somewhere..." 
+                   pattern = "  [a-z] {4} [0-9] {20} - [a-z] {10} [a-z, 0-9] {30}" required>
+
+            <label for =  "expendituresource">Expenditure & Source</label>
+            <input type = "text" name = "expendituresource" class = "inputCustomer" placeholder = "  Format : Rs 154515 - Gave it somewhere..." 
+                   pattern = "  [a-z] {4} [0-9] {20} - [a-z, 0-9] {30}" required>
+
+            <label for = "totalExpenditure">Total Expenditure</label>
+            <input type = "text" name = "totalExpenditure" class = "inputCustomer"/>
+
+            <label for = "balance">Balance</label>
+            <input type = "text" name = "balance" class = "inputCustomer"/>
+
+            <label for = "display">Display Input</label>
+            <button name = "display" id = "submitButton" style = "height: 60px; width: 250px;border-radius: 30px; font-size: 25px">Show Me</button>
+
+            <label for = "submit">Add Account</label>
+            <button name = "submit" id = "submitButton" style = "height: 60px; width: 200px; border-radius: 30px; font-size: 25px">Submit</button>
+        </div>
+        <div>
+          <script>
+              //the below has to be optimized for usage.
+              function newCustomer1(name, age, telephone, email, accountInformation, incomeMonthSource, expendituresource, totalExpenditure, balance) {
+                    this.name = name;
+                    this.telephone = telephone;
+                    this.email = email;
+                    this.accountInformation = accountInformation;
+                    this.incomeMonthSource = incomeMonthSource;
+                    this.expendituresource = expendituresource;
+                    this.totalExpenditure = totalExpenditure;
+                    this.balance = balance;
+  // This function returns a string with all the properties of the object
+                  this.getDetails = function(){
+                    var output = ''
+                    for (key in this) {
+                         output += key + ":" + this[key] + "\n"
+                         if(key == 'balance') break;
+                            }
+                         return output // Output is a string!
+                        }
+                    }
+            //the above has to be optimized for usage.
+            </script>  
+        </div>
+    </body>
+</html>
